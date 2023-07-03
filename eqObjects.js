@@ -1,37 +1,6 @@
-const assertEqual = function(actual, expected) {
-  const checkmark = "\u2713";
-  const xmark = "\u274C";
-  if (actual === expected) {
-    console.log(`${checkmark}${checkmark}${checkmark}  Assertion Passed: ${actual} = ${expected}`);
-    return true;
-  }
-  else {
-    console.log(`${xmark}${xmark}${xmark} Assertion Failed: ${actual} != ${expected}`);
-    return false;
-  }
-};  
-
-const findKeyByValue = function(someObject,objectValue){
-  for (let key in someObject){
-    if (someObject[key] === objectValue){
-      return key;
-    }
-  }
-};
-
-const eqArrays = function (arr1, arr2) {
-  let arrBool = false;
-  if (arr1.length === arr2.length){
-    for (const index in arr1){
-      arrBool = assertEqual(arr1[index],arr2[index]);
-      if (arrBool === false){
-        return arrBool;
-      }
-    }
-  }
-  return arrBool;
-};
-
+const assertEqual = require('./assertEqual');
+const findKeyByValue = require('findKeyByValue');
+const eqArrays = require('./eqArrays');
 
 
 const eqObjects = function(object1, object2) {
@@ -66,6 +35,7 @@ const eqObjects = function(object1, object2) {
   return keyBool;
 };
 
+module.exports = eqObjects;
 
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };

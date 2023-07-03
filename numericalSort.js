@@ -5,4 +5,6 @@ const numericalSort = function(arr){
   for (const element of arr){
     checkMin();
   }
-}
+};
+
+module.exports = numericalSort;

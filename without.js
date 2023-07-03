@@ -1,25 +1,5 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};  
-
-const eqArrays = function (arr1, arr2) {
-  let arrBool = false;
-  for (const index in arr1){
-    for (const jndex in arr2){
-      arrBool = assertEqual(arr1[index],arr2[jndex]);
-      if (arrBool){
-        return arrBool;
-      }
-    }
-  }
-  return arrBool;
-};
-
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
 
 const without = function(source,itemsToRemove) {
@@ -42,6 +22,7 @@ const without = function(source,itemsToRemove) {
   return withoutArray;
 };
   
+module.exports = without;
 
 //TESTING
 

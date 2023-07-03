@@ -4,7 +4,7 @@ const head = function(arr){
   if (arr.length === 1)
   {
     if (typeof(arr[0] === 'string')){
-      return String(arr);
+      return String(arr[0]);
     }
     else{
       return Number(arr[0]);
@@ -15,5 +15,5 @@ const head = function(arr){
   }
 };
 
-
+console.log(head([5]))
 module.exports = head;
