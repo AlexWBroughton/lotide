@@ -1,28 +1,5 @@
-const assertEqual = function(actual, expected) {
-  const checkmark = "\u2713";
-  const xmark = "\u274C";
-  if (actual === expected) {
-    console.log(`${checkmark}${checkmark}${checkmark}  Assertion Passed: ${actual} = ${expected}`);
-    return true;
-  }
-  else {
-    console.log(`${xmark}${xmark}${xmark} Assertion Failed: ${actual} != ${expected}`);
-    return false;
-  }
-};  
-
-const eqArrays = function (arr1, arr2) {
-  let arrBool = false;
-  if (arr1.length === arr2.length){
-    for (const index in arr1){
-      arrBool = assertEqual(arr1[index],arr2[index]);
-      if (arrBool === false){
-        return arrBool;
-      }
-    }
-  }
-  return arrBool;
-};
+const assertEqual = require("./assertEqual");
+const eqArrays = require("./eqArrays");
 
 
 
@@ -46,6 +23,12 @@ const middle = function (arr) {
   }
   return middleArray;
 }
+
+
+module.exports = middle
+
+
+
 
 console.log(middle([1])); // => []
 console.log(middle([1, 2])); // => []
