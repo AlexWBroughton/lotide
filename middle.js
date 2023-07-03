@@ -4,8 +4,6 @@ const eqArrays = require("./eqArrays");
 
 
 
-//Code works first try no need for array testing functions
-//unless the complexity evolves further.
 
 const middle = function (arr) {
   let middleArray = [];

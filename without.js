@@ -18,18 +18,9 @@ const without = function(source,itemsToRemove) {
       }
     }
   }
-  console.log(withoutArray);
   return withoutArray;
 };
   
 module.exports = without;
 
-//TESTING
-
-
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-without(["1", "2", "3"], ["1", "2", "3"]); //[]
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); //[hello,world]
 

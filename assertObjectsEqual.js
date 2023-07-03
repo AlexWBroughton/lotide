@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 const findKeyByValue = require('./findKeyByValue');
 const eqArrays = require('./eqArrays');
-const eqObjects = require('eqObjects');
+const eqObjects = require('./eqObjects');
 
 
 const assertObjectsEqual = function(actual, expected) {
@@ -19,10 +19,3 @@ const assertObjectsEqual = function(actual, expected) {
 
 
 module.exports = assertObjectsEqual;
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-assertObjectsEqual(multiColorShirtObject  , anotherMultiColorShirtObject); // => true
-
-const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-assertObjectsEqual(multiColorShirtObject  , longSleeveMultiColorShirtObject); // => false
