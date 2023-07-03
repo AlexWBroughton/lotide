@@ -18,7 +18,7 @@ const eqArrays = function (arr1, arr2) {
       arrBool = assertEqual(arr1[index],arr2[index]);
       if (arrBool === false){
         return arrBool;
-      }
+      } 
     }
   }
   return arrBool;
