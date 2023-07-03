@@ -15,6 +15,5 @@ const head = function(arr){
   }
 };
 
-console.log(head(['5']));
 
 module.exports = head;
