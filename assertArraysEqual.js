@@ -1,24 +1,5 @@
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};
-
-const eqArrays = function (arr1, arr2) {
-  let arrBool = false;
-  if (arr1.length === arr2.length) {
-    for (const index in arr1) {
-      arrBool = assertEqual(arr1[index], arr2[index]);
-      if (arrBool === false) {
-        return arrBool;
-      }
-    }
-  }
-  return arrBool;
-};
+const assertEqual = require('./assertEqual');
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function (actual, expected) {
   const checkmark = "\u2713";
@@ -31,4 +12,4 @@ const assertArraysEqual = function (actual, expected) {
   }
 };
 
-
+module.exports = assertArraysEqual;

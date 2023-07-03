@@ -16,4 +16,3 @@ const head = function(arr){
 };
 
 module.exports = head;
-assertEqual(head([]),"uyo");

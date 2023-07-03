@@ -13,5 +13,6 @@ const eqArrays = function (arr1, arr2) {
   return arrBool;
 };
 
+console.log(eqArrays([1,2,3],[1,2,3]));
 module.exports = eqArrays;
 
